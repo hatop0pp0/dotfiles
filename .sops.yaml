@@ -1,0 +1,11 @@
+keys:
+  # あなたが新しく作った公開鍵に「admin」というあだ名を付けます
+  - &admin age1z7rgpl29qgh0s6zqrfsqnth2e53vf0c7ldsavy08yh2ntln7dfzqr2vu8x
+
+creation_rules:
+  # secretsフォルダ、または.config/nix/secretsフォルダ内のyamlファイルを暗号化するルール
+  - path_regex: (secrets|\.config/nix/secrets)/.*\.yaml$
+    key_groups:
+      - age:
+          # 上で定義したあだ名「admin」の鍵をここに自動で当てはめます
+          - *admin
