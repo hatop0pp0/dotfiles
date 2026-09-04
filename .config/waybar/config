@@ -1,0 +1,79 @@
+{
+  "layer": "top",
+  "position": "top",
+  
+  "modules-left": [ "hyprland/workspaces" ],
+  "modules-center": [ "clock" ],
+  "modules-right": [
+    "pulseaudio",
+    "hyprland/submap",
+    "bluetooth",
+    "network",
+    "cpu",
+    "memory"
+  ],
+
+  "hyprland/window": {
+    "max-length": 50
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "",
+    "format-connected": " {num_connections}",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "wezterm start --title=bluetui -e bluetui"
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10,
+    "on-click": "exec ghostty --title=btop -e btop"
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {percentage}%",
+    "tooltip-format": "{used:0.1f}G/{total:0.1f}G used",
+    "on-click": "exec ghostty --title=htop -e htop"
+  },
+
+  "network": {
+    "format": "",
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "  ",
+    "tooltip-format": "{ifname} via {gwaddr}   ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "  ",
+    "max-length": 50,
+    "on-click": "exec nmrs"
+  },
+
+  "clock": {
+    "format": "   {:%a, %d. %b %I:%M %p}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#75f1fa'><b>{}</b></span>"
+      }
+    },
+    "on-click": "exec chromium --app=https://google.com"
+  },
+
+  "pulseaudio": {
+    "volume": "% {icon}",
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": [ "", "" ]
+    },
+    "scroll-step": 1,
+    "ignored-sinks": [ "Easy Effects Sink" ],
+    "on-click": "pavucontrol"
+  }
+}

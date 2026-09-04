@@ -1,0 +1,83 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    drun-display-format: "{name}";
+    sidebar-mode: false;
+
+    timeout {
+        action: "kb-cancel";
+        delay: 0;
+    }
+
+    filebrowser {
+        directories-first: true;
+        sorting-method: "name";
+    }
+}
+
+* {
+    bg: #18181b;
+    bg-selected: #27272a;
+    fg: #ffffff;
+    accent: #75f1fa;
+    
+    background-color: transparent;
+    text-color: #ffffff;
+    font: "JetBrainsMono Nerd Font Propo 14";
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 600px;
+    border: 2px;
+    border-color: #75f1fa;
+    border-radius: 12px;
+    background-color: #18181b;
+    padding: 15px;
+}
+
+mainbox {
+    children: [ "inputbar", "listview" ];
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: #27272a;
+    border-radius: 8px;
+    padding: 10px 15px;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color: #75f1fa;
+    margin: 0px 10px 0px 0px;
+}
+
+entry {
+    placeholder: "Search apps...";
+    placeholder-color: #71717a;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: true;
+    scrollbar: false;
+    spacing: 5px;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+element selected {
+    background-color: #27272a;
+    text-color: #75f1fa;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0px 10px 0px 0px;
+}
