@@ -23,7 +23,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal = "wezterm"
-local fileManager = "yazi"
+local fileManager = "wezterm start -- yazi"
 local browser = "firefox"
 local music = browser .. " --app=https://www.youtube.com"
 local notion = browser .. " --app=https://notion.so"
