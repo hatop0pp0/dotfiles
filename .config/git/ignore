@@ -1,0 +1,5 @@
+# Linuxやエディタが作る一時ファイル・キャッシュ
+*.swp
+*~
+.sass-cache/
+.fuse_hidden*
