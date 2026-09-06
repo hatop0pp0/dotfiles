@@ -15,5 +15,6 @@ in
     "waybar".source = mkLink ".config/waybar";
     "rofi".source = mkLink ".config/rofi";
     "hypr".source = mkLink ".config/hypr";
+    "git".source = mkLink ".config/git";
   };
 }
