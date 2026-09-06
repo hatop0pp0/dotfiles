@@ -90,7 +90,6 @@
 
   # システム全体（ルート）にインストールするパッケージ
   environment.systemPackages = with pkgs; [
-    git
   ];
 
   # システム状態バージョンの固定（初期インストール時のものを維持）

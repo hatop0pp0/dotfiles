@@ -6,5 +6,6 @@
    wezterm
    waybar
    rofi
+   git
  ];
 }
