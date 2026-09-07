@@ -85,9 +85,6 @@
     packages = with pkgs; [ ];
   };
 
-  # 標準ブラウザ（Firefox）の有効化
-  programs.firefox.enable = true;
-
   # システム全体（ルート）にインストールするパッケージ
   environment.systemPackages = with pkgs; [
   ];
