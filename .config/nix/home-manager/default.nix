@@ -5,11 +5,7 @@
     ./packages.nix
     ./sops.nix
     ./dotfiles.nix
-
-    # ./hyprland.nix 
-    # ./wezterm.nix
-    # ./waybar.nix
-    # ./rofi.nix
+    ./zsh
   ];
 
   home.username = "popo";

@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # システム全体でZshを使えるように許可する（ログインシェルにするための必須設定）
+  programs.zsh.enable = true;
+
   # ブートローダー設定
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -83,6 +86,7 @@
     description = "popo";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
+    shell = pkgs.zsh;
   };
 
   # システム全体（ルート）にインストールするパッケージ
