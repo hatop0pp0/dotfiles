@@ -10,5 +10,6 @@
    firefox
    sheldon
    bluetui
+   pavucontrol
  ];
 }
