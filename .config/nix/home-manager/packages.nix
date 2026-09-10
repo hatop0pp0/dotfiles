@@ -8,5 +8,6 @@
    rofi
    git
    firefox
+   sheldon
  ];
 }

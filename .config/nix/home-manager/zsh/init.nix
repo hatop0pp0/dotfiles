@@ -7,6 +7,9 @@
       if [ -f "$HOME/.config/zsh/rc" ]; then
         source "$HOME/.config/zsh/rc"
       fi
+
+      # sheldonのプラグインを有効化する設定
+      eval "$(sheldon source)"
     '';
   };
 }

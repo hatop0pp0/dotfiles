@@ -16,5 +16,6 @@ in
     "rofi".source = mkLink ".config/rofi";
     "hypr".source = mkLink ".config/hypr";
     "git".source = mkLink ".config/git";
+    "sheldon".source = mkLink ".config/sheldon";
   };
 }
