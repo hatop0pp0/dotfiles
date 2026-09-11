@@ -11,5 +11,8 @@
    sheldon
    bluetui
    pavucontrol
+   satty
+   grim
+   wl-clipboard
  ];
 }

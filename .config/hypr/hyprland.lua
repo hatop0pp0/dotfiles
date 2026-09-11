@@ -343,6 +343,18 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
+-- Satty スクリーンショット設定
+-- Satty をフロート（浮いた画面）表示にする設定
+hl.window_rule({
+	name = "satty-float",
+	match = { class = "com.gabm.satty" },
+        float = true,
+})
+
+-- Printキーで全画面撮影 ➔ Sattyで編集画面を開く (コピーコマンド付き)
+hl.bind("Print", hl.dsp.exec_cmd("grim - | satty -f -"))
+
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
