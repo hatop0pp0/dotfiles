@@ -17,5 +17,6 @@ in
     "hypr".source = mkLink ".config/hypr";
     "git".source = mkLink ".config/git";
     "sheldon".source = mkLink ".config/sheldon";
+    "satty".source = mkLink ".config/satty";
   };
 }
