@@ -25,6 +25,7 @@ hl.monitor({
 local terminal = "wezterm"
 local fileManager = "wezterm start -- yazi"
 local browser = "firefox"
+local chrome = "google-chrome" 
 local music = browser .. " --app=https://www.youtube.com"
 local notion = browser .. " --app=https://notion.so"
 local launcher = "rofi -show drun -show-icons"
@@ -264,6 +265,7 @@ local secondMod = "SUPER + SHIFT"
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(secondMod .. " + B", hl.dsp.exec_cmd(chrome))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(music))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(notion))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(launcher))

@@ -8,6 +8,7 @@
    rofi
    git
    firefox
+   google-chrome  
    sheldon
    bluetui
    pavucontrol

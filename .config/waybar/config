@@ -13,6 +13,19 @@
     "memory"
   ],
 
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "format": "{name} {windows}",
+    "format-window-separator": " ",
+    "window-rewrite-default": "❓",
+    "window-rewrite": {
+      "class<firefox>": ""
+    }
+  },
+
   "hyprland/window": {
     "max-length": 50
   },
