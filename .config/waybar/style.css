@@ -1,36 +1,118 @@
-@define-color highlight rgba(117, 241, 258, 1);
-@define-color dark-9 rgba(24, 24, 27, 1);
-@define-color dark-8 rgba(39, 39, 42, 1);
-@define-color dark-7 rgba(63, 63, 70, 1);
-@define-color dark-6 rgba(82, 82, 91, 1);
-@define-color dark-5 rgba(113, 113, 122, 1);
+/* ==========================================
+   1. カラー定義と基本サイズ設定
+   ========================================== */
+@define-color yellow #ebbcba;        /* ベースとなる黄色（ゴールド系） */
+@define-color capsule-bg #26233a;    /* カプセルの背景（深みのあるダークグレー） */
+@define-color highlight #9ccfd8;     /* アクティブ時のハイライト色 */
 
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
+    /* フォントファミリーと、見本のサイズ 10.0 を完全に再現 */
     font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
-    font-size: 17px;
+    font-size: 13px; 
 }
 
+/* バー全体の背景を透明化し、各モジュールを浮かせる */
 window#waybar {
-    background-color: @dark-9;
-    color: white;
+    background-color: transparent;
+    color: @yellow;
 }
 
+/* ==========================================
+   2. すべてのモジュールを「カプセル型」に一括適用
+   ========================================== */
+/* config.jsonc にある全てのモジュールに同じ形状を強制適用します */
+#workspaces,
+#clock,
+#pulseaudio,
+#submap,
+#bluetooth,
+#network,
+#cpu,
+#memory {
+    background: @capsule-bg;   /* 背景色 */
+    border: 1px solid @yellow; /* border_width = 1, border_color = yellow */
+    border-radius: 10px;       /* corner_radius = 10 */
+    
+    /* 上下の余白（padding）を調整して、「高さ30px」を完全に再現 */
+    padding: 3px 8px;          
+    
+    /* モジュール同士がくっつかないよう、見本に準じた外側の隙間を確保 */
+    margin: 5px 4px;
+}
+
+/* ==========================================
+   3. ワークスペース内部の微調整
+   ========================================== */
+/* #workspaces 自体にカプセル形状を適用したため、中のボタンは透明化します */
 #workspaces button {
-  padding: 3px;
-  margin: 7px 0px 7px 7px;
-  background: transparent;
-  border-radius: 2px;
-  color: white;
+    background: transparent;
+    color: @yellow;
+    border: none;
+    border-radius: 6px;
+    padding: 0px 4px;
+    margin: 0px 1px;
 }
 
+/* アクティブ（現在開いている画面）のハイライト設定（Semibold再現） */
 #workspaces button.active {
-  background: @highlight;
-  color: black;
-  font-weight: 700;
+    background: @highlight;    /* ハイライト色 */
+    color: @capsule-bg;        /* 文字色を反転 */
+    font-weight: 600;          /* style = "Semibold" */
 }
 
+/* 緊急通知 */
 #workspaces button.urgent {
-  background: rgba(227, 81, 73, 1);
-  color: black;
+    background: #eb6f92;       /* 赤系 */
+    color: @capsule-bg;
+}
+
+/* ==========================================
+   4. 各モジュールの色（枠と文字）だけを上書き
+   ========================================= */
+
+/* 左側：ワークスペース（水色系） */
+#workspaces {
+    border-color: #9ccfd8;
+    color: #9ccfd8;
+}
+
+/* 中央：時計（パープル系） */
+#clock {
+    border-color: #c4a7e7;
+    color: #c4a7e7;
+}
+
+/* 右側1：音量（ピンク・赤系） */
+#pulseaudio {
+    border-color: #eb6f92;
+    color: #eb6f92;
+}
+
+/* 右側2：Bluetooth（水色系） */
+#bluetooth {
+    border-color: #9ccfd8;
+    color: #9ccfd8;
+}
+
+/* 右側3：ネットワーク（グリーン系） */
+#network {
+    border-color: #31748f;
+    color: #31748f;
+}
+
+/* 右側4：CPU（イエロー系） */
+#cpu {
+    border-color: #f6c177;
+    color: #f6c177;
+}
+
+/* 右側5：メモリ（ローズ系） */
+#memory {
+    border-color: #ebbcba;
+    color: #ebbcba;
+}
+
+/* ワークスペースの中の文字も枠と同じ水色に揃えます */
+#workspaces button {
+    color: #9ccfd8;
 }
