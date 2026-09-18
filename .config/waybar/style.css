@@ -6,8 +6,8 @@
 @define-color highlight #9ccfd8;     /* アクティブ時のハイライト色 */
 
 * {
-    /* フォントファミリーと、見本のサイズ 10.0 を完全に再現 */
-    font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
+    /* 最新のNixOSの割り当て名 "JetBrainsMonoNF-Propo" に */
+    font-family: "JetBrainsMonoNF-Propo", "JetBrainsMono Nerd Font", sans-serif;
     font-size: 13px; 
 }
 
@@ -31,10 +31,10 @@ window#waybar {
 #memory {
     background: @capsule-bg;   /* 背景色 */
     border: 1px solid @yellow; /* border_width = 1, border_color = yellow */
-    border-radius: 10px;       /* corner_radius = 10 */
+    border-radius: 12px;       /* corner_radius = 10 */
     
     /* 上下の余白（padding）を調整して、「高さ30px」を完全に再現 */
-    padding: 3px 8px;          
+    padding: 0px 8px;          
     
     /* モジュール同士がくっつかないよう、見本に準じた外側の隙間を確保 */
     margin: 5px 4px;
@@ -49,14 +49,19 @@ window#waybar {
     color: @yellow;
     border: none;
     border-radius: 6px;
-    padding: 0px 4px;
-    margin: 0px 1px;
+    padding: 1px 4px;
+    margin: 1px 3px;
+}
+
+#workspaces button label {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* アクティブ（現在開いている画面）のハイライト設定（Semibold再現） */
 #workspaces button.active {
     background: @highlight;    /* ハイライト色 */
-    color: @capsule-bg;        /* 文字色を反転 */
+    color: #1f1d2e;            /* 文字色を反転 */
     font-weight: 600;          /* style = "Semibold" */
 }
 

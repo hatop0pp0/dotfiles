@@ -22,7 +22,10 @@
     "format-window-separator": " ",
     "window-rewrite-default": "❓",
     "window-rewrite": {
-      "class<firefox>": ""
+      "class<firefox>": "󰈹 ",
+      "class<org.wezfurlong.wezterm>": " ",
+      "class<chrome-notion.so__-Default>": " ",
+      "class<chrome-www.youtube.com__-Default>": " "
     }
   },
 
