@@ -41,9 +41,7 @@ local runner = "rofi -show run"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
-	--hl.exec_cmd("waybar")
-        hl.exec_cmd("quickshell")
-        hl.exec_cmd("hyprpaper") 
+	hl.exec_cmd("waybar")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 30")
 	hl.exec_cmd("fcitx5 -rd")
@@ -407,6 +405,4 @@ hl.window_rule({
 
 hl.bind("Print", hl.dsp.exec_cmd("grim - | satty -f -"))
 
-hl.exec_cmd("hyprctl keyword windowrule layer, ^(quickshell)$")
 
-exec_once = { "hyprpaper" }

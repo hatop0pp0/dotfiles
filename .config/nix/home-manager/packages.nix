@@ -2,7 +2,6 @@
 
 {
  home.packages = with pkgs; [
-   quickshell
    yazi
    wezterm
    waybar
@@ -16,6 +15,5 @@
    satty
    grim
    wl-clipboard
-   hyprpaper
  ];
 }
