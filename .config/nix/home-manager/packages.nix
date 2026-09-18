@@ -5,7 +5,7 @@
    quickshell
    yazi
    wezterm
-   # waybar
+   waybar
    rofi
    git
    firefox
@@ -17,10 +17,5 @@
    grim
    wl-clipboard
    hyprpaper
-
-   # --- CurryFavourのTopBar用に追加 ---
-   quickshell
-   rubik
-   wireplumber
  ];
 }
