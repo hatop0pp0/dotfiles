@@ -2,9 +2,10 @@
 
 {
  home.packages = with pkgs; [
+   quickshell
    yazi
    wezterm
-   waybar
+   # waybar
    rofi
    git
    firefox
@@ -15,5 +16,11 @@
    satty
    grim
    wl-clipboard
+   hyprpaper
+
+   # --- CurryFavourのTopBar用に追加 ---
+   quickshell
+   rubik
+   wireplumber
  ];
 }

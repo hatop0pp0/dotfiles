@@ -10,9 +10,10 @@ in
 {
   # ❄️ ここで「手元の生ファイル」と「~/.config/」の中身をダイレクトに繋ぎます
   xdg.configFile = {
+    "quickshell".source = mkLink ".config/quickshell"; 
     "yazi".source = mkLink ".config/yazi";
     "wezterm".source = mkLink ".config/wezterm";
-    "waybar".source = mkLink ".config/waybar";
+    #"waybar".source = mkLink ".config/waybar";
     "rofi".source = mkLink ".config/rofi";
     "hypr".source = mkLink ".config/hypr";
     "git".source = mkLink ".config/git";
