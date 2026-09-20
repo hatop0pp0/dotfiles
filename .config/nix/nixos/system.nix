@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # システム全体のデフォルトシェルをZshにする
+  users.defaultUserShell = pkgs.zsh;
+
   # システム全体でZshを使えるように許可する（ログインシェルにするための必須設定）
   programs.zsh.enable = true;
 
@@ -86,7 +89,7 @@
     description = "popo";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
   };
 
   # システム全体（ルート）にインストールするパッケージ
