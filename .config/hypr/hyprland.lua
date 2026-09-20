@@ -22,12 +22,12 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal = "wezterm"
-local fileManager = "wezterm start -- yazi"
-local browser = "firefox"
+local terminal = "ghostty"
+local fileManager = "ghostty -e yazi"
+local browser = "brave"
 local chrome = "google-chrome" 
-local music = chrome .. " --app=https://www.youtube.com"
-local notion = chrome .. " --app=https://notion.so"
+local music = browser .. " --app=https://www.youtube.com"
+local notion = browser .. " --app=https://notion.so"
 local launcher = "rofi -show drun -show-icons"
 local runner = "rofi -show run"
 

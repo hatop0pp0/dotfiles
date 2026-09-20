@@ -9,7 +9,7 @@ in
   # ❄️ ここで「手元の生ファイル」と「~/.config/」の中身をダイレクトに繋ぎます
   xdg.configFile = {
     "yazi".source = mkLink ".config/yazi";
-    "wezterm".source = mkLink ".config/wezterm";
+    "ghostty".source = mkLink ".config/ghostty";
     "waybar".source = mkLink ".config/waybar";
     "rofi".source = mkLink ".config/rofi";
     "hypr".source = mkLink ".config/hypr";

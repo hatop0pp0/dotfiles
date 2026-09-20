@@ -3,11 +3,11 @@
 {
  home.packages = with pkgs; [
    yazi
-   wezterm
+   ghostty
    waybar
    rofi
    git
-   firefox
+   brave
    google-chrome
    sheldon
    bluetui

@@ -1,0 +1,13 @@
+# フォント設定
+font-family = "JetBrains Mono"
+font-size = 11
+
+# テーマ設定（スペースなしの TokyoNight に変更）
+theme = "TokyoNight"
+
+# ウィンドウの見た目（単数形の decoration = none に変更）
+window-decoration = none
+
+# クリップボードとの連携
+clipboard-read = allow
+clipboard-write = allow
