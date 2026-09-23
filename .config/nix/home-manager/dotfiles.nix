@@ -6,6 +6,11 @@ let
   mkLink = path: config.lib.file.mkOutOfStoreSymlink "${dotfilesPath}/${path}";
 in
 {
+  # 🪐 ホーム直下へダイレクトに通り道を繋ぐ設定
+  home.file = {
+    ".hermes/config.yaml".source = mkLink ".config/hermes/config.yaml";
+  };
+
   # ❄️ ここで「手元の生ファイル」と「~/.config/」の中身をダイレクトに繋ぎます
   xdg.configFile = {
     "yazi".source = mkLink ".config/yazi";
