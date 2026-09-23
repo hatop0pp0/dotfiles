@@ -4,6 +4,8 @@
  home.packages = with pkgs; [
    yazi
    ghostty
+   herdr
+   antigravity-cli
    waybar
    rofi
    git

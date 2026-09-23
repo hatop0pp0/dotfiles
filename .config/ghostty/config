@@ -11,3 +11,5 @@ window-decoration = none
 # クリップボードとの連携
 clipboard-read = allow
 clipboard-write = allow
+
+command = herdr 

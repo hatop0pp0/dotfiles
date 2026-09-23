@@ -10,6 +10,8 @@ in
   xdg.configFile = {
     "yazi".source = mkLink ".config/yazi";
     "ghostty".source = mkLink ".config/ghostty";
+    "herdr".source = mkLink ".config/herdr";
+    "antigravity".source = mkLink ".config/antigravity";
     "waybar".source = mkLink ".config/waybar";
     "rofi".source = mkLink ".config/rofi";
     "hypr".source = mkLink ".config/hypr";

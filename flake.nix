@@ -3,15 +3,15 @@
 
   inputs = {
     # NixOS official package source
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     
-    # home-manager
+    # home-manager (ブランチ名を省略した最もクリーンな書き方)
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # 【ここを追加！】sops-nixのプログラムをインターネットからダウンロードする設定
+    # sops-nixのプログラムをインターネットからダウンロードする設定
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
