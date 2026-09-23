@@ -16,6 +16,5 @@
 
   home.sessionVariables = {
     TAVILY_API_KEY = "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";
-    OPENAI_API_KEY = "dummy-key";
   };
 }
