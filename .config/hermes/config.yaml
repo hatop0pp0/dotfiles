@@ -1,4 +1,21 @@
-provider: "ollama"
-model: "qwen3:8b"
-base_url: "http://localhost:11434"
-model_ollama_num_ctx: 64000
+model:
+  provider: "custom"
+  base_url: "http://localhost:11434/v1"
+  default: "qwen3:4b"
+  context_length: 65536
+  ollama_num_ctx: 65536
+
+agent:
+  reasoning_effort: "minimal"
+
+platform_toolsets:
+  cli:
+    - file
+    - memory
+    - terminal
+    - web
+  tui:
+    - file
+    - memory
+    - terminal
+    - web
