@@ -1,7 +1,0 @@
-2026-09-23T03:40:21.718236Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=5418
-2026-09-23T03:40:21.719529Z  INFO herdr::client: connecting to server path=/home/popo/.config/herdr/herdr-client.sock
-2026-09-23T03:40:21.771543Z  INFO herdr::client::handshake: endpoint handshake succeeded generation=1 server_version=0.9.0
-2026-09-23T03:42:34.666803Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=5418
-2026-09-23T03:42:36.651634Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=5741
-2026-09-23T03:42:36.651700Z  INFO herdr::client: connecting to server path=/home/popo/.config/herdr/herdr-client.sock
-2026-09-23T03:42:36.675138Z  INFO herdr::client::handshake: endpoint handshake succeeded generation=1 server_version=0.9.0

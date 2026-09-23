@@ -3,3 +3,11 @@
 *~
 .sass-cache/
 .fuse_hidden*
+
+# ==============================================================================
+# Herdr - 自動生成されるログと一時キャッシュを無視させる
+# ==============================================================================
+.config/herdr/*.log
+.config/herdr/session.json
+.config/herdr/release-notes.json
+.config/herdr/.plugins.lock
