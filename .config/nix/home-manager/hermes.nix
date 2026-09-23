@@ -13,4 +13,8 @@
   programs.zsh.shellAliases = {
     "hm" = "hermes --tui";
   };
+
+  home.sessionVariables = {
+    TAVILY_API_KEY = "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";
+  };
 }
