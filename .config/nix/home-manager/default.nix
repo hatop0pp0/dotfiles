@@ -6,6 +6,7 @@
     ./sops.nix
     ./dotfiles.nix
     ./zsh
+    ./hermes.nix
   ];
 
   home.username = "popo";

@@ -11,6 +11,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # 🚀 Hermes Agentのソースコードを固定
+    hermes-agent = {
+      url = "github:NousResearch/hermes-agent";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # sops-nixのプログラムをインターネットからダウンロードする設定
     sops-nix = {
       url = "github:Mic92/sops-nix";
