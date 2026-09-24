@@ -1,7 +1,4 @@
-# ==============================================================================
-# Hermes Agent - 宣言的永続化モジュール
-# ==============================================================================
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config, ... }:
 
 {
   home.packages = [
@@ -12,8 +9,11 @@
     "hm" = "hermes --tui";
   };
 
-  home.sessionVariables = {
-    GEMINI_API_KEY = "";
-    GOOGLE_API_KEY = "";
-  };
+  # 🔒 Zshが起動するときに、sopsの暗号解読ファイルを直接読み込ませる正しい設定
+  programs.zsh.initExtra = ''
+    if [ -f "${config.sops.secrets.gemini-api-key.path}" ]; then
+      export GEMINI_API_KEY=$(cat "${config.sops.secrets.gemini-api-key.path}")
+      export GOOGLE_API_KEY=$GEMINI_API_KEY
+    fi
+  '';
 }

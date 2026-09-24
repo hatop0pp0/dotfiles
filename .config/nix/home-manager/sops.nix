@@ -6,6 +6,7 @@
     defaultSopsFile = ../secrets/user-secrets.yaml;
     secrets = {
       github-packages-token = { };
+      gemini-api-key = { };
     };
   };
 }
