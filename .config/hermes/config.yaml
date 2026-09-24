@@ -1,9 +1,6 @@
 model:
-  provider: "custom"
-  base_url: "http://localhost:11434/v1"
-  default: "qwen3:4b"
-  context_length: 65536
-  ollama_num_ctx: 65536
+  provider: "google"
+  default: "gemini-3.6-flash"
 
 agent:
   reasoning_effort: "minimal"

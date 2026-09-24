@@ -1,25 +1,6 @@
 { pkgs, ... }:
 
 {
-  # ==============================================================================
-  # 🤖 ローカルAI (Ollama) のクリーンインストール設定（2026最新・CPU環境最適化）
-  # ==============================================================================
-  services.ollama = {
-    enable = true;
-
-    # 💡 acceleration = null; を削除し、CPU専用パッケージを直接指定します
-    package = pkgs.ollama-cpu;
-
-    # 💡 N100 (16GB RAM) CPU環境で64K長文コンテキストを安全に動かすメモリ最適化設定
-    environmentVariables = {
-      OLLAMA_FLASH_ATTENTION = "1";
-      OLLAMA_KV_CACHE_TYPE = "q4_0";  # KVキャッシュを約2.3GBに圧縮し、OOM(メモリ不足)を完全防止！
-    };
-
-    # 💡 起動時の急激なメモリ圧迫を防ぐため、Hermes起動時にオンデマンドでロードさせます
-    loadModels = [ ];
-  };
-
   # システム全体のデフォルトシェルをZshにする
   users.defaultUserShell = pkgs.zsh;
 
