@@ -1,15 +1,15 @@
-# フォント設定
-font-family = "JetBrains Mono"
+# フォント設定（文字化け対策で NF に修正）
+font-family = "JetBrainsMono NF"
 font-size = 11
 
-# テーマ設定（スペースなしの TokyoNight に変更）
+# テーマ設定
 theme = "TokyoNight"
 
-# ウィンドウの見た目（単数形の decoration = none に変更）
+# ウィンドウの見た目
 window-decoration = none
 
 # クリップボードとの連携
 clipboard-read = allow
 clipboard-write = allow
 
-command = herdr 
+command = herdr
