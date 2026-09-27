@@ -11,6 +11,7 @@
    rofi
    git
    brave
+   firefox
    google-chrome
    sheldon
    bluetui
