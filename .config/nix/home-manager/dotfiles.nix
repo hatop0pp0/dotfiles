@@ -13,6 +13,7 @@ in
 
   # ❄️ ここで「手元の生ファイル」と「~/.config/」の中身をダイレクトに繋ぎます
   xdg.configFile = {
+    "starship.toml".source = mkLink ".config/starship.toml";
     "yazi".source = mkLink ".config/yazi";
     "ghostty".source = mkLink ".config/ghostty";
     "herdr".source = mkLink ".config/herdr";

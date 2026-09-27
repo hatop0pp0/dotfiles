@@ -4,3 +4,13 @@ onboarding = false
 [keys]
 prefix = "ctrl+b"
 
+[ui]
+status_indicators = "dots"
+
+[theme]
+name = "tokyo-night"
+auto_switch = false
+
+[ui.toast]
+delivery = "off"
+

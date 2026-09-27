@@ -1,0 +1,63 @@
+add_newline = true
+
+# ----------------------------------------------------
+# format
+# ----------------------------------------------------
+format = """
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$time\
+\n$character\
+"""
+
+# ----------------------------------------------------
+# modules
+# ----------------------------------------------------
+[os]
+disabled = false
+style = "bg:#E35B00 fg:#000000"
+format = "[](fg:#E35B00)[  ]($style)"
+
+[username]
+show_always = true
+style_user = "bg:#E35B00 fg:#FFFFFF bold"
+style_root = "bg:#E35B00 fg:#FFFFFF bold"
+format = "[$user]($style)[](fg:#E35B00 bg:#E59800)"
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "~"
+style = "bg:#E59800 fg:#2B2B2B bold"
+format = "[$path]($style)[](fg:#E59800 bg:#299881)"
+
+[git_branch]
+symbol = " "
+style = "bg:#299881 fg:#FFFFFF bold"
+format = "[$symbol$branch]($style)"
+
+[git_status]
+style = "bg:#299881 fg:#FFFFFF"
+format = "[$all_status$ahead_behind]($style)[](fg:#299881 bg:#4A4A4A)"
+
+[cmd_duration]
+min_time = 1000
+style = "bg:#4A4A4A fg:#F1FA8C bold"
+format = "[ ⏱ $duration ]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#4A4A4A fg:#E0E0E0"
+format = "[  $time ]($style)[](fg:#4A4A4A)"
+
+# ----------------------------------------------------
+# prompt module
+# ----------------------------------------------------
+[character]
+success_symbol = "[❯](bold #E59800)"
+error_symbol = "[❯](bold #FF5555)"
+vimcmd_symbol = "[V](bold green) "

@@ -10,6 +10,9 @@
 
       # sheldonのプラグインを有効化する設定
       eval "$(sheldon source)"
+
+      # Starshipの有効化設定（追加）
+      eval "$(starship init zsh)"
     '';
   };
 }
