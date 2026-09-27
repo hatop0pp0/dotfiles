@@ -9,6 +9,7 @@ $username\
 $directory\
 $git_branch\
 $git_status\
+$cmd_duration\
 $time\
 \n$character\
 """
@@ -41,12 +42,13 @@ format = "[$symbol$branch]($style)"
 
 [git_status]
 style = "bg:#299881 fg:#FFFFFF"
-format = "[$all_status$ahead_behind]($style)[](fg:#299881 bg:#4A4A4A)"
+format = "[$all_status$ahead_behind]($style)"
 
+# 作業時間（2秒以上で自動表示）
 [cmd_duration]
-min_time = 1000
+min_time = 2000
 style = "bg:#4A4A4A fg:#F1FA8C bold"
-format = "[ ⏱ $duration ]($style)"
+format = "[](fg:#299881 bg:#4A4A4A)[ ⏱ $duration ]($style)"
 
 [time]
 disabled = false
