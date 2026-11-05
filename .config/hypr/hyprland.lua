@@ -30,6 +30,7 @@ local music = browser .. " --app=https://www.youtube.com"
 local notion = browser .. " --app=https://notion.so"
 local launcher = "rofi -show drun -show-icons"
 local runner = "rofi -show run"
+local gammastep = "gammastep -O 3500"
 
 -------------------
 ---- AUTOSTART ----
@@ -272,6 +273,8 @@ hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(launcher))
 hl.bind(secondMod .. " + space", hl.dsp.exec_cmd(runner))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
+
+hl.bind(secondMod .. " + N", hl.dsp.exec_cmd("pkill gammastep || " .. gammastep))
 
 hl.bind(
 	secondMod .. " + Q",

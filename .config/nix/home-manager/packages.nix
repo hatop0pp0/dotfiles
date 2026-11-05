@@ -19,5 +19,8 @@
    satty
    grim
    wl-clipboard
+   zip
+   unzip
+   gammastep
  ];
 }
