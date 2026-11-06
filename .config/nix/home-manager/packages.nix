@@ -22,5 +22,7 @@
    zip
    unzip
    gammastep
+   hypridle
+   hyprlock
  ];
 }

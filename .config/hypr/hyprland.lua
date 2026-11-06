@@ -31,6 +31,7 @@ local notion = browser .. " --app=https://notion.so"
 local launcher = "rofi -show drun -show-icons"
 local runner = "rofi -show run"
 local gammastep = "gammastep -O 3500"
+local suspend = "systemctl suspend"
 
 -------------------
 ---- AUTOSTART ----
@@ -275,6 +276,8 @@ hl.bind(secondMod .. " + space", hl.dsp.exec_cmd(runner))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 
 hl.bind(secondMod .. " + N", hl.dsp.exec_cmd("pkill gammastep || " .. gammastep))
+
+hl.bind(secondMod .. " + S", hl.dsp.exec_cmd(suspend))
 
 hl.bind(
 	secondMod .. " + Q",
