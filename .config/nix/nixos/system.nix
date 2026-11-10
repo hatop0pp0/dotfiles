@@ -44,11 +44,15 @@
     ];
   };
 
-  # グラフィック・デスクトップ環境（X11 & GNOME）
-  services.xserver.enable = true;
+  # TTY1 でユーザー "popo" に自動ログインする
+  services.getty.autologinUser = "popo";
 
-  # ログイン画面をReGreetに
-  programs.regreet.enable = true;
+  # Zshをログインシェルにしているため、TTY1でログインした瞬間にHyprlandを自動起動する
+  programs.zsh.loginShellInit = ''
+    if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+      exec start-hyprland
+    fi
+  '';
 
   # キーボードレイアウト（日本語）
   services.xserver.xkb = {
